@@ -1,0 +1,12 @@
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202407-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202408-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202409-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202410-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202411-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202412-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202501-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202502-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202503-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202504-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202505-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//202506-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;

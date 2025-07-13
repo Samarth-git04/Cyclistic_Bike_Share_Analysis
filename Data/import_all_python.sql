@@ -1,0 +1,1 @@
+\COPY Cyclistic_trips FROM 'C://Users//SAMARTH//OneDrive//Desktop//Data Analysis//Cyclistic-Bike_Analysis//Data//All_data.csv' DELIMITER ',' CSV HEADER;
