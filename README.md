@@ -62,7 +62,7 @@
 
 ## Recommendations
 
-- At last I suggest some potential solutinos that might show how Cyclistic can convert Casual Users to Annual Members. 
+- At last I suggest some potential solutions that might show how Cyclistic can convert Casual Users to Annual Members. 
 
 1. Give discounts on Annual Memberships purchased on weekdays. 
 2. Launch another Membership program for 6 months May to Octomber. 
