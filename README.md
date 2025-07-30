@@ -9,7 +9,7 @@
 - My initial hypothesis before going into this was that-because how the annual and casual riders are categorized-that the key to the answer would be in total trip duration or in average trip duration, but to my surpise that is not the case at all. The answer lies in the distribution of number of trips over weekly, but mainly monthly scales. 
 # Data Cleaning
 - For data cleaning I decided to use SQL Language(PostrgreSQL) and a little bit of python. 
-- After getting all the data I had to combine it all in a single csv file or to load it all in a single database. I decided to do both just to check which one is faster. I used [Combine_data.py](Data\Combine_data.py) to combine all the csvs and then to dump them in a single DB directly using [import_all_python.sql](Data\import_all_python.sql). To load all the files directly into PSQL Database I used [import_all.sql](Data\import_all.sql) in PSQL Tool by `/i C://PATH//TO//FOLDER//import_all.sql`. For results, the method with python was much quicker. 
+- After getting all the data I had to combine it all in a single csv file or to load it all in a single database. I decided to do both just to check which one is faster. I used [Combine_data.py](Data/Combine_data.py) to combine all the csvs and then to dump them in a single DB directly using [import_all_python.sql](Data/import_all_python.sql). To load all the files directly into PSQL Database I used [import_all.sql](Data/import_all.sql) in PSQL Tool by `/i C://PATH//TO//FOLDER//import_all.sql`. For results, the method with python was much quicker. 
 - The data contains 13 columns in total as follows:
 
 | No. | column name        | dtype     | Description                                             |
@@ -38,13 +38,13 @@
     5. I created a CTE(Common Table Expression) in a view [trip_analysis_view.sql](trip_analysis_view.sql) and used it to check for trips with duration < 1 minute and removed those as well as these values are unrealistic for a bike share trip. 
 - After all this cleaning the final table as defined in the `trip_analysis` CTE was put into a csv file. It has about 3.86M rows, which prior to cleaning were around 5M. This shows that a lot of the data might have faulty or NULL values which were removed.
 # Data Analysis
-- For analysis of trip duration for both groups I also exported some data in the [trip_duration.csv](Data\trip_duration.csv) file. Then I used the [trip_duration_analysis.py](trip_duration_analysis.py) to analyze this data and to my surprise found no relation between the trip duration and the membership. The figure below shows the density of trip duration(basically the probability of trip duration being in some interval) on the y-axis and trip duration(in minutes) on the x-axis. 
-![Trip Duration Density Hist](images\Trip_Duration_Hist.png)
+- For analysis of trip duration for both groups I also exported some data in the [trip_duration.csv](Data/trip_duration.csv) file. Then I used the [trip_duration_analysis.py](trip_duration_analysis.py) to analyze this data and to my surprise found no relation between the trip duration and the membership. The figure below shows the density of trip duration(basically the probability of trip duration being in some interval) on the y-axis and trip duration(in minutes) on the x-axis. 
+![Trip Duration Density Hist](images/Trip_Duration_Hist.png)
 
 - There is no visual difference in how long the Annual members and Casual riders use the bike for. The average trip duration is pretty low for both, but there is still some difference. For annual members the average trip duration is **12.16 mins** and for casual users it is **23.20 mins**. This suggests that casual users use the bike for longer time and take it only for longer rides, on the other hand annual members use it for much smaller trips as well. 
 - Now to find further differences I decided to use [POWER BI](https://www.microsoft.com/en-us/download/details.aspx?id=58494), which is a visualization tool, to analyse differences between the two member types in their use of bikes. 
 - I first created the main dashboard which shows the difference in their total rides and their favorite bike types. It also shows mean trip duration over month for both members. 
-![Main_Dashboard](images\Main_Dashboard.png) 
+![Main_Dashboard](images/Main_Dashboard.png) 
 
 - The right hand side of the dashboard focuses on the total rides over month and week which differ quite significantly for both. To further understand this I also created a Drill Through page for both Annual and casual users. But if you want to analyse these metrics for various selections there are also 4 different slicers on the Home page, for difference months, days of week, bike type and for member types. 
 - On the drill through page you can see other stats like most used start station and it also has a chart which overlaps avg. trip duration and total number of rides on the bottom left corner. Images of their Drill Through for both of these are shown below.
